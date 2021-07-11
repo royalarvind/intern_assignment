@@ -1,7 +1,7 @@
 const express = require('express')
 bodyParser  = require("body-parser")
 require('./db/mongoose')
-const userRouter = require('./routers/user')
+const userRouter = require('./routes/user')
 
 const app = express()
 const port = process.env.PORT || 3000
