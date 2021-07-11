@@ -66,7 +66,7 @@ router.get('/claim-details', async (req, res)=>{
     try {
         const details = await Claim.findOne({ policyNumber: req.body.policyNumber})
         if(!details){
-            return res.status(404).send({details})
+            return res.status(404).send({message: "Details not found"})
         }
         res.status(200).send(details)
     } catch (e) {
